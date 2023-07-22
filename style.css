@@ -1,0 +1,277 @@
+/*TODO_1: Add appropriate CSS to style your page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: "Proxima Nova", "Helvetica", "Arial", sans-serif;
+    font-size: 18px;
+    color: #222222;
+    width: 700px;
+}
+
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+
+#course-name {
+    display: inline-block;
+    font-family: "Helvetica", sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ee3322;
+}
+
+#circles {
+    position: absolute;
+    right: 0px;
+}
+
+.stack-circle {
+    display: inline-flex;
+    height: 50px;
+    width: 50px;
+    background-color: #ffee00;
+    border-radius: 100%;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    transform: rotate(-30deg);
+}
+
+#quiz-banner {
+    background-image: url(../a1_2001040173/images/background.jpg);
+    height: 425px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#quiz-name {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: "Pangolin", "Trebuchet MS", cursive;
+    font-size: 60px;
+    color: black;
+    padding: 10px;
+    max-width: 75%;
+    vertical-align: center;
+    text-align: center;
+}
+
+#author {
+    margin-top: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+#introduction {
+    margin-bottom: 36px;
+}
+
+#introduction h2,
+#introduction p,
+#box-start p {
+    margin-bottom: 18px;
+}
+
+#box-start,
+#box-submit,
+#box-result {
+    text-align: center;
+    background-color: #f1f1f1;
+    border: 1px solid #dcdcdc;
+    margin: 18px 0 36px 0;
+}
+
+#box-start h2,
+#btn-start {
+    margin: 18px 0 36px 0;
+}
+
+#btn-start,
+#btn-submit,
+#btn-try-again {
+    display: inline-block;
+    padding: 18px;
+    color: white;
+    margin-bottom: 36px;
+}
+
+#btn-start,
+#btn-try-again {
+    background-color: #2196F3;
+}
+
+#btn-start:hover,
+#btn-try-again:hover {
+    cursor: pointer;
+    background-color: #0d8bf2;
+}
+
+#btn-submit {
+    margin: 18px 0;
+    background-color: #4CAF50;
+}
+
+#btn-submit:hover {
+    cursor: pointer;
+    background-color: #46a049;
+}
+
+.question-index {
+    margin: 30px 0;
+}
+
+.options-list {
+    margin: 30px 0;
+}
+
+input {
+    cursor: pointer;
+    display: inline-block;
+    margin: 15px;
+}
+
+/* label {
+    margin-left: 15px;
+} */
+
+.option div {
+    display: inline-block;
+}
+
+.option {
+    display: block;
+    background-color: #f1f1f1;
+    margin: 1px 0;
+    /* padding: 15px 0; */
+}
+
+.question-text {
+    margin: 30px 0;
+}
+
+.option:hover {
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+/* .option:has(input[type="radio"]:checked) {
+    background-color: #ddd;
+}  */
+
+.option-selected {
+    background-color: #ddd;
+}
+
+/*     START REVIEW QUIZ */
+.question-wrap {
+    position: relative;
+}
+
+.correct-answer {
+    background-color: #d4edda;
+}
+
+.correct-answer::after {
+    content: "Correct answer";
+}
+
+.option-correct {
+    background-color: #dddddd;
+}
+
+.option-correct::after {
+    content: "Correct answer";
+}
+
+.wrong-answer {
+    background-color: #f8d7da;
+}
+
+.wrong-answer::after {
+    content: "Your answer";
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.correct-answer::after,
+.option-correct::after,
+.wrong-answer::after {
+    position: absolute;
+    right: 5px;
+    margin: 5px 0;
+    padding: 6px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.review-answer {
+    position: absolute;
+    right: 5px;
+    margin: 5px 0;
+    padding: 6px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*      END REVIEW QUIZ      */
+
+/* TODO_2: Add appropriate viewport & CSS media queries to support the mobile view */
+#result {
+    margin: 30px 0;
+    font-size: 30px;
+}
+
+#score,
+#score_percent {
+    margin-bottom: 20px;
+}
+
+#review {
+    margin-bottom: 35px;
+}
+
+#score {
+    font-size: 24px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        max-width: 95%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    header .stack-circle {
+        display: none;
+    }
+}
